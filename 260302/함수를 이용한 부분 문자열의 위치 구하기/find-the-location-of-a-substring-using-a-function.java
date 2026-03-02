@@ -10,42 +10,27 @@ public class Main {
     }
 
     static int findPatternIdx(String text, String pattern) {
-        // 패턴을 문자열 배열로 변환
-        char[] arr = pattern.toCharArray();
-        int arrLength = arr.length; 
-        boolean flag = false;
-        int start = -1;
+        int n = text.length();
+        int m = pattern.length();
 
+        if (n < m) return -1;
 
-        // 텍스트 순환
-        for (int i = 0; i < text.length() ; i++) {
+        // 문자열 순회(등호는 n=m이 같은 경우 때문에 넣음)
+        for (int i = 0; i <= n-m ; i++) {
+            boolean match = true;
 
-            // 첫 번째와 일치 여부 
-            if (text.charAt(i) == arr[0]) {
-                start = i;
-
-                if (arrLength == 1) {
-                    return start;
-                }
-
-                for (int j = 1; j < arrLength; j++) {
-
-                    if (text.charAt(i+j) != arr[j]) {
-                        break;
-                    } else {
-                        flag = true;
-                    }
-
+            // 패턴 문자열 순회
+            for (int j = 0; j < m; j++) {
+                if (text.charAt(i+j) != pattern.charAt(j)) {
+                    match = false;
+                    break;
                 }
             }
-            
-            if (flag) {
-                break;
-            } else {
-                start = -1;
-            }
+
+            if (match) return i;
         }
 
-        return start;
+        return -1;
+
     }
 }
