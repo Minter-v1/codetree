@@ -8,7 +8,6 @@ public class Main {
         int n = sc.nextInt();
         People[] arr = new People[n];
 
-        sc.nextLine();
 
         for (int i = 0; i < n; i++) {
             String name = sc.next();
@@ -17,7 +16,6 @@ public class Main {
 
             arr[i] = new People(name, height, weight);
 
-            sc.nextLine();
         }
 
         Arrays.sort(arr);
