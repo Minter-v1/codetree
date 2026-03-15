@@ -12,8 +12,8 @@ public class Main {
 
     static int checkDateTime(int a, int b, int c) {
        if (a < 11) return -1;
-       if ((a > 11) && (b < 11)) return -1;
-       if ((a > 11) && (b > 11) && (c < 11)) return -1;
+       if ((a == 11) && (b < 11)) return -1;
+       if ((a == 11) && (b == 11) && (c < 11)) return -1;
 
        int elapsedMin = 0;
        int d = 11, h = 11, m = 11;
