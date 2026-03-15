@@ -16,9 +16,13 @@ public class Main {
         int[] month = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         int elapsedDays = 0;
 
+        if (((m1 == m2) && (d1 == d2))) return 1;
+        
+
 
         while (true) {
             if ((m1 == m2) && (d1 == d2)) {
+
                 break;
             }
 
