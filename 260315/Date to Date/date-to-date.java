@@ -14,10 +14,9 @@ public class Main {
 
     static int checkDate(int m1, int d1, int m2, int d2) {
         int[] month = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        int elapsedDays = 0;
+        int elapsedDays = 1;
 
-        if (((m1 == m2) && (d1 == d2))) return 1;
-        
+
 
 
         while (true) {
@@ -28,7 +27,8 @@ public class Main {
 
             elapsedDays++;
             d1++;
-            if (d1 > month[m2]) {
+
+            if (d1 > month[m1]) {
                 m1++;
                 d1 = 1;
             }
