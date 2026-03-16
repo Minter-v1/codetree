@@ -23,7 +23,7 @@ public class Main {
         String[] day = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
         int[] month = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         int start = 0, target = 0;
-        int cnt = 1;
+        int cnt = 0;
 
         for (String ins: day) {
             if (d.equals(ins)) {
@@ -34,6 +34,10 @@ public class Main {
 
 
         while (true) {
+            if (start == target) {
+                cnt++;
+            }
+            
             if ((m1 == m2) && (d1 == d2)) {
                 break;
             }
@@ -41,9 +45,6 @@ public class Main {
             d1++;
             start = (start + 1) % 7;
 
-            if (start == target) {
-                cnt++;
-            }
 
             if (d1 > month[m1]) {
                 d1 = 1;
