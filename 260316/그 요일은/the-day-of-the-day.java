@@ -25,25 +25,23 @@ public class Main {
         int start = 0, target = 0;
         int cnt = 0;
 
-        for (String ins: day) {
-            if (d.equals(ins)) {
-                start = Arrays.asList(day).indexOf(ins);
-                target = Arrays.asList(day).indexOf(ins);
-            }
-        }
+        start = Arrays.asList(day).indexOf("Mon");
+        target = Arrays.asList(day).indexOf(d);
+
+        
 
 
         while (true) {
-            if (start == target) {
-                cnt++;
-            }
-            
             if ((m1 == m2) && (d1 == d2)) {
                 break;
             }
 
             d1++;
             start = (start + 1) % 7;
+
+            if (start == target) {
+                cnt++;
+            }
 
 
             if (d1 > month[m1]) {
