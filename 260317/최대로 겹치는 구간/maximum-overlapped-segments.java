@@ -14,20 +14,15 @@ public class Main {
             int s = sc.nextInt();
             int e = sc.nextInt();
 
-        
+            // 양수는 200버대 이므로 모든 수에 대한 보정 필요
+            s += 100;
+            e += 100;
 
-            //음수가 포함된 경우 보정
-            if (s < 0) {
-                s += 100;
-                e += 100;
-            }
-
-            
 
             for (int j = s; j < e; j++) {
                 arr[j]++;
             }
-            
+
             if (e > maxNum) {
                 maxNum = e;
             }
