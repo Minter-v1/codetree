@@ -27,12 +27,13 @@ public class Main {
                 }
             } else {
             // 왼쪽으로 가는 경우
-                end = temp - dist;
-                temp = end - 1;
+                end = temp - dist + 1;
+                temp = temp - dist;
 
                 for (int k = start; k >= end; k--) {
                     arr[k]++;
                 }
+                
             }
 
         }
