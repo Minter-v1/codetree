@@ -21,11 +21,10 @@ public class Main {
             //음수가 포함된 경우 보정
             if (s < 0) {
                 s += 100;
-            }
-
-            if (e < 0) {
                 e += 100;
             }
+
+            
 
             for (int j = s; j < e; j++) {
                 arr[j]++;
