@@ -14,9 +14,7 @@ public class Main {
             int s = sc.nextInt();
             int e = sc.nextInt();
 
-            if (e > maxNum) {
-                maxNum = e;
-            }
+        
 
             //음수가 포함된 경우 보정
             if (s < 0) {
@@ -28,6 +26,10 @@ public class Main {
 
             for (int j = s; j < e; j++) {
                 arr[j]++;
+            }
+            
+            if (e > maxNum) {
+                maxNum = e;
             }
             
 
