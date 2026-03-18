@@ -14,7 +14,7 @@ public class Main {
 
     // 이진수 변환
     static void changeDigit(int num) {
-        int[] arr = new int[10];
+        int[] arr = new int[100];
         int tmp = 0;
 
         while (true) {
