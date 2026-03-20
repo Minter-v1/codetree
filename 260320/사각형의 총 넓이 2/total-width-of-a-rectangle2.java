@@ -12,16 +12,17 @@ public class Main {
             int x2 = sc.nextInt();
             int y2 = sc.nextInt();
 
-            // 음수인 경우
-            if (x1 < 0) {
+            // 시작점이 따로 없음. 0~99까지는 음수 범위
+            // 100이 좌표상으로는 원점임;; 그래서 모든 수를 offset
+            
                 x1 += 100;
                 x2 += 100;
-            } 
+            
 
-            if (y1 < 0) {
+            
                 y1 += 100;
                 y2 += 100;
-            } 
+            
 
             for (int r = x1; r < x2; r++) {
                 for (int col = y1; col < y2; col++) {
