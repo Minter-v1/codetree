@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int[][] arr = new int[101][101];
+        int[][] arr = new int[201][201];
         int area = 0;
 
         for (int i = 0; i < n; i++) {
