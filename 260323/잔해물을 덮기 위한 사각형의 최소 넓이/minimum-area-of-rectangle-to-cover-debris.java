@@ -16,10 +16,10 @@ public class Main {
                 ans = (x2 - x1) * (y2 - y1);
             }
 
-            x1 += 100;
-            y1 += 100;
-            x2 += 100;
-            y2 += 100;
+            x1 += 1000;
+            y1 += 1000;
+            x2 += 1000;
+            y2 += 1000;
 
             for (int r = x1; r < x2; r++) {
                 for (int c = y1; c < y2; c++) {
@@ -48,9 +48,6 @@ public class Main {
 
         ans = (maxX - minX + 1) * (maxY - minY + 1); 
         System.out.println(ans);
-
-
-    
         
     }
 
