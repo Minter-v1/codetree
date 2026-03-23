@@ -9,7 +9,7 @@ public class Main {
         int[] arr = new int[n];
 
         if (n == 1) {
-            System.out.println(0);
+            System.out.println(1);
             System.exit(0);
         }
 
