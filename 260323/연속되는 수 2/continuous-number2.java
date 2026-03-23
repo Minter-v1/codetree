@@ -8,6 +8,12 @@ public class Main {
         int temp = 1;
         int[] arr = new int[n];
 
+        if (n == 1) {
+            System.out.println(0);
+            System.exit(0);
+        }
+
+
         for (int i = 0; i < n; i++) {
             int num = sc.nextInt();
             arr[i] = num;
