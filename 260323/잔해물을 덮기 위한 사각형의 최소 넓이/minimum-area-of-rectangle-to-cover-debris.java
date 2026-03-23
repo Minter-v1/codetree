@@ -45,9 +45,13 @@ public class Main {
                 maxY = Math.max(maxY, c);
             }
         }
-
-        ans = (maxX - minX + 1) * (maxY - minY + 1); 
-        System.out.println(ans);
+        if (maxX == -1) {
+            System.out.println(0);
+        } else {
+            ans = (maxX - minX + 1) * (maxY - minY + 1); 
+            System.out.println(ans);
+        }
+        
         
     }
 
