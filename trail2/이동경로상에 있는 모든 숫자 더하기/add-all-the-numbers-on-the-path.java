@@ -79,7 +79,7 @@ public class Main {
 
     // 격자 범위 판단 메서드
     static boolean isValid(int[][] arr, int nx, int ny) {
-        if ((nx < 0 || nx >= arr.length) || (ny < 0 || ny >= arr.length)) return false;
-        return true;
+        return (0 <= nx && nx < arr.length) && (0 <= ny && ny < arr.length);
+        
     }
 }
