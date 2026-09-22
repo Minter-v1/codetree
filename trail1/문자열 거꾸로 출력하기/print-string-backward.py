@@ -1,11 +1,9 @@
 import sys
 
-input = sys.stdin.readline
-string = ""
+for string in sys.stdin:
+    string = string.strip()
 
-while (True):
-    string = input().strip()
-
-    if (string == "END"):
+    if string == "END":
         break
+    
     print(string[::-1])
