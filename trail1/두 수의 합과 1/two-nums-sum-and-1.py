@@ -2,15 +2,8 @@ import sys
 
 input = sys.stdin.readline
 
-# 입력된 정수 리스트
-lst = map(int, input().split())
-sum = sum(lst)
+total = sum(map(int, input().split()))
 
-# 카운트 변수
-cnt = 0
+print(str(total).count('1'))
 
-for char in str(sum):
-    if char == '1':
-        cnt += 1
 
-print(cnt)
